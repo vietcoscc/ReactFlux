@@ -1,6 +1,6 @@
-import AppView from '../views/App';
+import AppView from './views/App';
 import {Container} from 'flux/utils';
-import TodoStore from '../stores/TodoStore';
+import TodoStore from './stores/TodoStore';
 
 function getStores() {
   return [

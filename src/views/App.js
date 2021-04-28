@@ -24,32 +24,19 @@ function Header(props) {
  * @return {null}
  */
 function Main(props) {
-  if (props.todos.size === 0) {
-    return null;
-  }
   return (
     <section id="main">
       <ul id="todo-list">
         {[...props.todos.values()].reverse().map(todo => (
           <li key={todo.id}>
-            <div className="view">
-              <input
-                className="toggle"
-                type="checkbox"
-                checked={todo.complete}
-                onChange={() => {
-
-                }}
-              />
-              <label>{todo.text}</label>
-            </div>
+            <label>{todo.text}</label>
           </li>
         ))}
       </ul>
       <button
         className="destroy"
         onClick={() => {
-          TodoActions.addTodo("HAHAHAHA");
+          TodoActions.addTodo("Todo Item");
         }}>ADD
       </button>
     </section>
